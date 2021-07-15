@@ -129,7 +129,7 @@ RUN mkdir -p /home/renderer/src \
 RUN mkdir -p /home/renderer/src \
  && cd /home/renderer/src \
  && git clone https://github.com/cvpreddy/OSM_carto_dark.git \
- && cd openstreetmap-carto \
+ && cd OSM_carto_dark \
  && rm -rf .git \
  && npm install -g carto@0.18.2 \
  && carto project.mml > mapnik.xml 
