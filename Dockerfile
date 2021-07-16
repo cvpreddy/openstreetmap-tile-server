@@ -128,8 +128,8 @@ RUN mkdir -p /home/renderer/src \
 # Configure stylesheet
 RUN mkdir -p /home/renderer/src \
  && cd /home/renderer/src \
- && git clone https://github.com/cvpreddy/OSM_carto_dark.git \
- && cd OSM_carto_dark \
+ && git clone --single-branch --branch master https://github.com/cvpreddy/openstreetmap-carto.git \
+ && cd openstreetmap-carto \
  && rm -rf .git \
  && npm install -g carto@0.18.2 \
  && carto project.mml > mapnik.xml 
@@ -182,4 +182,4 @@ COPY indexes.sql /
 ENTRYPOINT ["/run.sh"]
 CMD []
 
-EXPOSE 80 5432
+EXPOSE 80 5436
